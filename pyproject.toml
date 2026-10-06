@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyswarp"
+version = "0.1.0"
+description = "Efficient warping (reprojection) of SAR imagery in swath geometry"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "Anton Korosov" }]
+license = { text = "MIT" }
+keywords = ["swath", "warp", "SAR"]
+dependencies = [
+    "numpy",
+    "scipy",
+    "pyproj",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
